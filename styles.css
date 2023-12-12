@@ -128,8 +128,8 @@ section.wrapper {
 
 section.wrapper .top {
   display: flex;
-    gap: 1rem;
-    align-items: center;
+  gap: 1rem;
+  align-items: center;
 }
 
 section.wrapper .top h1 {
@@ -137,6 +137,63 @@ section.wrapper .top h1 {
   font-size: 1.5rem;
 }
 
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.questions .question {
+}
+
+.questions .question summary {
+  color: var(--dark-purple);
+  font-size: 0.925rem;
+  font-weight: 700;
+}
+
+.questions .question .content {
+  color: var(--grayish-purple);
+  font-weight: 500;
+  font-size: 0.825rem;
+}
+
+/* Remove and replace details arrow */
+
+details > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+details > summary span {
+  max-width: 85%;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::after {
+  content: " ";
+  background-image: url("./assets/images/icon-plus.svg");
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+}
+
+details[open] > summary::after {
+  content: " ";
+  background-image: url("./assets/images/icon-minus.svg");
+  width: 30px;
+  height: 30px;
+}
+
+/* details > summary::after {
+    list-style-type: ' ';
+} */
 /* Keep footer at the bottom of the page */
 footer {
   position: absolute;
