@@ -140,11 +140,20 @@ section.wrapper .top h1 {
 .questions {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   margin-top: 1.5rem;
 }
 
-.questions .question {
+.questions .question:not(:last-of-type){
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--light-pink);
+}
+
+.questions .question:first-of-type{
+    padding-top: 0;
+}
+
+.questions .question:last-of-type{
+    padding-top: 1rem;
 }
 
 .questions .question summary {
@@ -191,9 +200,7 @@ details[open] > summary::after {
   height: 30px;
 }
 
-/* details > summary::after {
-    list-style-type: ' ';
-} */
+
 /* Keep footer at the bottom of the page */
 footer {
   position: absolute;
