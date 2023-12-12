@@ -45,24 +45,6 @@ ol {
   list-style: none;
 }
 
-/* Set core body defaults */
-body {
-  font-family: "Work Sans", sans-serif, Arial, Helvetica;
-  min-height: 100vh;
-  line-height: 1.5;
-  background-color: var(--light-pink);
-  color: var(--grayish-purple);
-  scroll-behavior: smooth;
-  background-image: url("./assets/images/background-pattern-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: contain;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  width: 100vw;
-}
-
 /* Set shorter line heights on headings and interactive elements */
 h1,
 h2,
@@ -114,25 +96,55 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-main {
-  width: 100%;
+/* Set core body defaults */
+body {
+  font-family: "Work Sans", sans-serif, Arial, Helvetica;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--light-pink);
+  color: var(--grayish-purple);
+  scroll-behavior: smooth;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
 }
 
-section.wrapper {
+.wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+section.container {
   background-color: var(--white);
   width: 90%;
   margin-inline: auto;
+  margin-top: 15%;
   border-radius: 1rem;
   padding: 1rem;
 }
 
-section.wrapper .top {
+section.container .top {
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
-section.wrapper .top h1 {
+section.container .top h1 {
   color: var(--dark-purple);
   font-size: 1.5rem;
 }
@@ -143,17 +155,17 @@ section.wrapper .top h1 {
   margin-top: 1.5rem;
 }
 
-.questions .question:not(:last-of-type){
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--light-pink);
+.questions .question:not(:last-of-type) {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--light-pink);
 }
 
-.questions .question:first-of-type{
-    padding-top: 0;
+.questions .question:first-of-type {
+  padding-top: 0;
 }
 
-.questions .question:last-of-type{
-    padding-top: 1rem;
+.questions .question:last-of-type {
+  padding-top: 1rem;
 }
 
 .questions .question summary {
@@ -200,14 +212,10 @@ details[open] > summary::after {
   height: 30px;
 }
 
-
 /* Keep footer at the bottom of the page */
 footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem;
+    padding: 0.5rem;
+    text-align: center;
 }
 
 /* Media Queries */
