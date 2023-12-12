@@ -28,11 +28,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Robertron624/faq-accordion-newest)
+- Solution URL: [Netlify Site](https://faq-wrap-newest.netlify.app/)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
