@@ -10,6 +10,7 @@
   --light-pink: hsl(275, 100%, 97%);
   --grayish-purple: hsl(292, 16%, 49%);
   --dark-purple: hsl(292, 42%, 14%);
+  --hover-purple: rgba(145, 59, 203);
 }
 
 *,
@@ -117,9 +118,9 @@ body {
 }
 
 .wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -132,10 +133,12 @@ main {
 section.container {
   background-color: var(--white);
   width: 90%;
+  max-width: 34.375rem;
   margin-inline: auto;
   margin-top: 15%;
   border-radius: 1rem;
   padding: 1rem;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 section.container .top {
@@ -169,15 +172,21 @@ section.container .top h1 {
 }
 
 .questions .question summary {
+  cursor: pointer;
   color: var(--dark-purple);
   font-size: 0.925rem;
   font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+
+.questions .question:hover summary {
+  color: var(--hover-purple);
 }
 
 .questions .question .content {
   color: var(--grayish-purple);
   font-weight: 500;
-  font-size: 0.825rem;
+  font-size: 0.925rem;
 }
 
 /* Remove and replace details arrow */
@@ -214,14 +223,27 @@ details[open] > summary::after {
 
 /* Keep footer at the bottom of the page */
 footer {
-    padding: 0.5rem;
-    text-align: center;
+  padding: 0.5rem;
+  text-align: center;
 }
 
 /* Media Queries */
 
-@media (min-width: 7680px) {
+@media (min-width: 768px) {
   body {
     background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  section.container {
+    padding: 2rem;
+    margin-top: unset;
+  }
+
+  section.container .top h1 {
+    font-size: 3rem;
   }
 }
